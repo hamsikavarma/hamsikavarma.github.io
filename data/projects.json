@@ -1,0 +1,192 @@
+{
+  "_instructions": "Add your projects here. Each project should showcase your work.",
+  "sectionTitle": "Featured Projects",
+  "projects": [
+    {
+      "title": "fraud-detection-in-python",
+      "description": "Full-featured application built as a learning exercise",
+      "technologies": [
+        "Jupyter Notebook"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/fraud-detection-in-python",
+      "demo": "https://github.com/hamsikavarma/fraud-detection-in-python"
+    },
+    {
+      "title": "time-series-forecasting-python",
+      "description": "Modern web application demonstrating clean code principles",
+      "technologies": [
+        "Jupyter Notebook",
+        "Python",
+        "HTML"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/hamsikavarma/time-series-forecasting-python",
+      "demo": "https://github.com/hamsikavarma/time-series-forecasting-python"
+    },
+    {
+      "title": "creditcardfrauddetection-mlops",
+      "description": "Modern web application demonstrating clean code principles",
+      "technologies": [
+        "Jupyter Notebook",
+        "Python",
+        "HTML",
+        "CSS",
+        "Dockerfile"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/hamsikavarma/creditcardfrauddetection-mlops",
+      "demo": "https://github.com/hamsikavarma/creditcardfrauddetection-mlops"
+    },
+    {
+      "title": "mutual-fund-analysis-dashboard-python-powerbi",
+      "description": "Educational project for mastering software architecture",
+      "technologies": [
+        "HTML"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/hamsikavarma/mutual-fund-analysis-dashboard-python-powerbi",
+      "demo": "https://github.com/hamsikavarma/mutual-fund-analysis-dashboard-python-powerbi"
+    },
+    {
+      "title": "supply-chain-dashboard",
+      "description": "Learning project built with modern web technologies",
+      "technologies": [
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/supply-chain-dashboard",
+      "demo": "https://github.com/hamsikavarma/supply-chain-dashboard"
+    },
+    {
+      "title": "NNDL_ICP_5",
+      "description": "Assignment",
+      "technologies": [
+        "Jupyter Notebook"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/NNDL_ICP_5",
+      "demo": "https://github.com/hamsikavarma/NNDL_ICP_5"
+    },
+    {
+      "title": "NNDL",
+      "description": "ICP-1",
+      "technologies": [
+        "Jupyter Notebook"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/NNDL",
+      "demo": "https://github.com/hamsikavarma/NNDL"
+    },
+    {
+      "title": "call-center-performance-analytics-dashboard",
+      "description": "Educational project for mastering software architecture",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/call-center-performance-analytics-dashboard",
+      "demo": "https://github.com/hamsikavarma/call-center-performance-analytics-dashboard"
+    },
+    {
+      "title": "power-bi-mastery-dynamic-dashboards-advanced-dax",
+      "description": "Learning project built with modern web technologies",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/power-bi-mastery-dynamic-dashboards-advanced-dax",
+      "demo": "https://github.com/hamsikavarma/power-bi-mastery-dynamic-dashboards-advanced-dax"
+    },
+    {
+      "title": "hr-analytics-kpi-dashboard-using-power-bi",
+      "description": "Full-featured application built as a learning exercise",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/hr-analytics-kpi-dashboard-using-power-bi",
+      "demo": "https://github.com/hamsikavarma/hr-analytics-kpi-dashboard-using-power-bi"
+    },
+    {
+      "title": "dashboards-development-using-tableau-and-powerbi",
+      "description": "Practice application demonstrating full-stack development skills",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/dashboards-development-using-tableau-and-powerbi",
+      "demo": "https://github.com/hamsikavarma/dashboards-development-using-tableau-and-powerbi"
+    },
+    {
+      "title": "Neuralnetwork1",
+      "description": "700771943",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/Neuralnetwork1",
+      "demo": "https://github.com/hamsikavarma/Neuralnetwork1"
+    },
+    {
+      "title": "FINAL-",
+      "description": "GitHub repository: FINAL-",
+      "technologies": [
+        "Jupyter Notebook"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/FINAL-",
+      "demo": "https://github.com/hamsikavarma/FINAL-"
+    },
+    {
+      "title": "Mini_NNDL",
+      "description": "GitHub repository: Mini_NNDL",
+      "technologies": [
+        "Jupyter Notebook"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/Mini_NNDL",
+      "demo": "https://github.com/hamsikavarma/Mini_NNDL"
+    },
+    {
+      "title": "NNDL-ICP6",
+      "description": "GitHub repository: NNDL-ICP6",
+      "technologies": [
+        "Jupyter Notebook"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/NNDL-ICP6",
+      "demo": "https://github.com/hamsikavarma/NNDL-ICP6"
+    },
+    {
+      "title": "NNDL_ICP_4",
+      "description": "GitHub repository: NNDL_ICP_4",
+      "technologies": [
+        "Jupyter Notebook"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/NNDL_ICP_4",
+      "demo": "https://github.com/hamsikavarma/NNDL_ICP_4"
+    },
+    {
+      "title": "NNDL_ICP_3",
+      "description": "GitHub repository: NNDL_ICP_3",
+      "technologies": [
+        "Jupyter Notebook"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/NNDL_ICP_3",
+      "demo": "https://github.com/hamsikavarma/NNDL_ICP_3"
+    },
+    {
+      "title": "Assignment_2",
+      "description": "GitHub repository: Assignment_2",
+      "technologies": [
+        "Jupyter Notebook"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/Assignment_2",
+      "demo": "https://github.com/hamsikavarma/Assignment_2"
+    },
+    {
+      "title": "NNDL1_ICP_1",
+      "description": "GitHub repository: NNDL1_ICP_1",
+      "technologies": [
+        "Jupyter Notebook"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/hamsikavarma/NNDL1_ICP_1",
+      "demo": "https://github.com/hamsikavarma/NNDL1_ICP_1"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "_instructions": "Add your work experience here. Copy the experience object for each job.",
+  "sectionTitle": "Professional Experience",
+  "experiences": [
+    {
+      "title": "Data Analyst",
+      "company": "Northern Trust",
+      "period": "Sep 2025 – Present",
+      "location": "",
+      "description": "Developed interactive Power BI dashboards using DAX, Power Query, Power BI Service, and SQL Server to track portfolio performance and risk metrics, enabling faster executive decision-making across asset management teams.\nEngineered automated ETL/ELT pipelines using SQL and Python to integrate, transform, and validate trade and client data from multiple sources, improving data quality, reporting automation, and reducing manual reporting effort by 40%.\nPerformed ad hoc analysis, trend analysis, and data reconciliation on large financial datasets using SQL and Excel, delivering actionable business insights while supporting compliance, audit reporting, and operational decision-making.\nPartnered with business stakeholders to define KPIs and develop Business Intelligence dashboards, improving data accuracy, reporting consistency, and stakeholder visibility by 25%.\nOptimized SQL queries, CTEs, Window Functions, Stored Procedures, and complex Joins, reducing report generation time from hours to minutes while improving operational efficiency for daily reporting cycles.\nAutomated recurring data validation checks using Python scripts and SQL logic, minimizing data discrepancies and strengthening reliability of financial reports by 30%.",
+      "responsibilities": [
+        "Developed interactive Power BI dashboards using DAX, Power Query, Power BI Service, and SQL Server to track portfolio performance and risk metrics, enabling faster executive decision-making across asset management teams",
+        "Engineered automated ETL/ELT pipelines using SQL and Python to integrate, transform, and validate trade and client data from multiple sources, improving data quality, reporting automation, and reducing manual reporting effort by 40%",
+        "Performed ad hoc analysis, trend analysis, and data reconciliation on large financial datasets using SQL and Excel, delivering actionable business insights while supporting compliance, audit reporting, and operational decision-making",
+        "Partnered with business stakeholders to define KPIs and develop Business Intelligence dashboards, improving data accuracy, reporting consistency, and stakeholder visibility by 25%",
+        "Optimized SQL queries, CTEs, Window Functions, Stored Procedures, and complex Joins, reducing report generation time from hours to minutes while improving operational efficiency for daily reporting cycles",
+        "Automated recurring data validation checks using Python scripts and SQL logic, minimizing data discrepancies and strengthening reliability of financial reports by 30%"
+      ]
+    },
+    {
+      "title": "Data Analyst",
+      "company": "CitiusTech",
+      "period": "Jan 2021 – July 2024",
+      "location": "",
+      "description": "Designed and maintained SQL-based reporting solutions for healthcare clients, using SQL Server and SSRS, improving clinical data reporting accuracy by 20%.\nDeveloped interactive Tableau dashboards using Calculated Fields, Parameters, LOD Expressions, and KPI visualizations to visualize patient outcomes, operational metrics, and KPIs, enabling data-driven decision-making across clinical departments.\nMigrated legacy reporting systems to Power BI using DAX, Power Query, and SQL, reducing report processing time by 35%.\nAutomated data extraction and transformation workflows using Python and SSIS, streamlining ETL processes and cutting manual effort by 30%.\nConducted trend analysis, ad hoc analysis, and root cause analysis on healthcare datasets using SQL and Excel to identify utilization patterns, cost drivers, and actionable business insights for client-facing analytics engagements.\nConfigured data quality frameworks, performed data validation, and supported data governance initiatives to improve data integrity, reporting accuracy, and reduce reporting errors by 25%.\nResolved recurring data discrepancies in claims and clinical datasets through root-cause analysis using SQL, improving downstream report reliability by 20%.",
+      "responsibilities": [
+        "Designed and maintained SQL-based reporting solutions for healthcare clients, using SQL Server and SSRS, improving clinical data reporting accuracy by 20%",
+        "Developed interactive Tableau dashboards using Calculated Fields, Parameters, LOD Expressions, and KPI visualizations to visualize patient outcomes, operational metrics, and KPIs, enabling data-driven decision-making across clinical departments",
+        "Migrated legacy reporting systems to Power BI using DAX, Power Query, and SQL, reducing report processing time by 35%",
+        "Automated data extraction and transformation workflows using Python and SSIS, streamlining ETL processes and cutting manual effort by 30%",
+        "Conducted trend analysis, ad hoc analysis, and root cause analysis on healthcare datasets using SQL and Excel to identify utilization patterns, cost drivers, and actionable business insights for client-facing analytics engagements",
+        "Configured data quality frameworks, performed data validation, and supported data governance initiatives to improve data integrity, reporting accuracy, and reduce reporting errors by 25%",
+        "Resolved recurring data discrepancies in claims and clinical datasets through root-cause analysis using SQL, improving downstream report reliability by 20%"
+      ]
+    }
+  ]
+}
