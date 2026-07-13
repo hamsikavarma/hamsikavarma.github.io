@@ -1,5 +1,5 @@
 {
-  "_instructions": "Six curated projects. Each needs a technologies[] array (loader maps over it).",
+  "_instructions": "Curated projects. Each needs a technologies[] array (loader maps over it).",
   "sectionTitle": "Featured Projects",
   "kicker": "04 — Selected Work",
   "projects": [
@@ -7,35 +7,17 @@
       "title": "Credit-Card Fraud Detection",
       "category": "Machine Learning · MLOps",
       "image": "assets/images/projects/fraud-detection.jpg",
-      "description": "An end-to-end MLOps pipeline that trains, tracks, and serves a credit-card fraud classifier — from imbalanced-data handling and model evaluation to a containerized, reproducible deployment.",
-      "technologies": ["Python", "Scikit-learn", "MLflow", "Docker", "FastAPI"],
+      "description": "A credit-card fraud detection app that serves Logistic Regression, Random Forest, and XGBoost models behind a Flask interface, returning a fraud probability and risk tier per transaction. Training balances classes with SMOTE and logs runs to MLflow, and a LangChain + OpenAI layer adds a plain-language explanation for each prediction — all packaged with Docker.",
+      "technologies": ["Python", "scikit-learn", "XGBoost", "SMOTE", "MLflow", "Flask", "LangChain", "Docker"],
       "icon": "fas fa-shield-halved",
       "github": "https://github.com/hamsikavarma/creditcardfrauddetection-mlops"
     },
     {
-      "title": "Time-Series Forecasting",
-      "category": "Predictive Analytics",
-      "image": "assets/images/projects/time-series.jpg",
-      "description": "Demand and financial time-series forecasting in Python — exploratory analysis, feature engineering, and backtested models comparing classical statistics against machine-learning approaches.",
-      "technologies": ["Python", "Pandas", "Statsmodels", "Scikit-learn", "Jupyter"],
-      "icon": "fas fa-chart-line",
-      "github": "https://github.com/hamsikavarma/time-series-forecasting-python"
-    },
-    {
-      "title": "Mutual-Fund Analysis Dashboard",
-      "category": "Business Intelligence",
-      "image": "assets/images/projects/mutual-fund.jpg",
-      "description": "An interactive Power BI dashboard analyzing mutual-fund performance, risk, and returns — backed by a Python data-prep layer that cleans and aggregates fund data into decision-ready visuals.",
-      "technologies": ["Power BI", "Python", "Pandas", "DAX"],
-      "icon": "fas fa-coins",
-      "github": "https://github.com/hamsikavarma/mutual-fund-analysis-dashboard-python-powerbi"
-    },
-    {
-      "title": "Supply-Chain Dashboard",
-      "category": "Business Intelligence",
+      "title": "Supply-Chain Analytics Dashboard",
+      "category": "Data Analytics",
       "image": "assets/images/projects/supply-chain.jpg",
-      "description": "A supply-chain analytics dashboard surfacing inventory, fulfillment, and cost KPIs — turning raw operational data into clear signals for planning and bottleneck detection.",
-      "technologies": ["Python", "Power BI", "SQL"],
+      "description": "An interactive Streamlit dashboard for supply-chain optimization — pairing Prophet demand forecasts (tracked with MAE/RMSE accuracy) with inventory calculations for safety stock and reorder points, plus supplier on-time and lead-time analytics, all explorable through Plotly charts and filters.",
+      "technologies": ["Python", "Streamlit", "Prophet", "scikit-learn", "Plotly", "Pandas"],
       "icon": "fas fa-truck-fast",
       "github": "https://github.com/hamsikavarma/supply-chain-dashboard"
     },
@@ -43,19 +25,10 @@
       "title": "HR Analytics KPI Dashboard",
       "category": "Business Intelligence",
       "image": "assets/images/projects/hr-analytics.jpg",
-      "description": "A Power BI KPI dashboard for HR analytics — tracking headcount, attrition, and workforce trends with custom DAX measures and drill-through for stakeholder self-service.",
+      "description": "A three-page Power BI dashboard analyzing HR gender diversity and inclusion across a 500-employee organization — visualizing headcount, hiring, promotions, turnover, performance ratings, and executive gender balance, all sliceable by job level, department, region, and age group.",
       "technologies": ["Power BI", "DAX", "Excel"],
       "icon": "fas fa-users",
       "github": "https://github.com/hamsikavarma/hr-analytics-kpi-dashboard-using-power-bi"
-    },
-    {
-      "title": "Call-Center Performance Analytics",
-      "category": "Business Intelligence",
-      "image": "assets/images/projects/call-center.jpg",
-      "description": "A performance-analytics dashboard for call-center operations — visualizing call volume, handle time, and CSAT so managers can monitor service levels and staffing at a glance.",
-      "technologies": ["Power BI", "SQL", "Excel"],
-      "icon": "fas fa-headset",
-      "github": "https://github.com/hamsikavarma/call-center-performance-analytics-dashboard"
     }
   ]
 }
