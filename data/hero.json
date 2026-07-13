@@ -1,22 +1,23 @@
 {
   "_instructions": "Hero section content - the first thing visitors see on your portfolio.",
+  "kicker": "Data Analyst · 4+ Years",
   "greeting": "Hi, I'm",
-  "name": "HAMSIKA CHINTAKUNTLA",
+  "name": "Hamsika Chintakuntla",
   "title": "Data Analyst",
-  "summary": "Data Analyst with 1+ years of experience specializing in Python, SQL, Pandas.",
-  "avatarUrl": "/avatar.png",
+  "summary": "I turn complex data into decisions — building <strong>ETL/ELT pipelines</strong>, <strong>BI dashboards</strong>, and <strong>AI-powered analytics</strong> across financial services and healthcare.",
+  "avatarUrl": "assets/images/hamsika.jpg",
   "highlights": [
     {
-      "icon": "fas fa-briefcase",
-      "text": "Professional Experience"
+      "icon": "fas fa-chart-line",
+      "text": "Power BI & Tableau"
     },
     {
-      "icon": "fas fa-code",
-      "text": "Technical Expertise"
+      "icon": "fas fa-database",
+      "text": "SQL & Python"
     },
     {
-      "icon": "fas fa-users",
-      "text": "Team Collaboration"
+      "icon": "fas fa-robot",
+      "text": "ML · LLM · RAG"
     }
   ],
   "cta": {
@@ -25,17 +26,30 @@
         "text": "Get In Touch",
         "href": "#contact",
         "type": "primary",
-        "external": false
+        "external": false,
+        "icon": "fas fa-paper-plane"
       },
       {
-        "text": "View My Work",
-        "href": "#projects",
+        "text": "Download Résumé",
+        "href": "assets/Hamsika_Chintakuntla_Resume.pdf",
         "type": "secondary",
-        "external": false
+        "external": true,
+        "download": true,
+        "icon": "fas fa-file-arrow-down"
       }
     ]
   },
   "socialLinks": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/hamsika-chintakuntla-441456259",
+      "icon": "fab fa-linkedin-in"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/hamsikavarma",
+      "icon": "fab fa-github"
+    },
     {
       "platform": "Email",
       "url": "mailto:chintakuntlahamsika@gmail.com",

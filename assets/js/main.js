@@ -62,15 +62,22 @@ async function loadHero() {
         const hero = await response.json();
 
         // Update hero content
+        const heroKicker = document.getElementById('heroKicker');
         const heroGreeting = document.getElementById('heroGreeting');
         const heroName = document.getElementById('heroName');
         const heroTitle = document.getElementById('heroTitle');
         const heroSummary = document.getElementById('heroSummary');
+        const heroPhoto = document.getElementById('heroPhoto');
 
+        if (heroKicker) heroKicker.textContent = hero.kicker || '';
         if (heroGreeting) heroGreeting.textContent = hero.greeting;
         if (heroName) heroName.textContent = hero.name;
         if (heroTitle) heroTitle.textContent = hero.title;
         if (heroSummary) heroSummary.innerHTML = hero.summary;
+        if (heroPhoto && hero.avatarUrl) {
+            heroPhoto.src = hero.avatarUrl;
+            heroPhoto.alt = hero.name || 'Profile photo';
+        }
 
         // Build highlights
         const highlightsContainer = document.getElementById('heroHighlights');
@@ -95,7 +102,8 @@ async function loadHero() {
                 const a = document.createElement('a');
                 a.href = button.href;
                 a.className = `btn btn-${button.type}`;
-                if (button.external) a.target = '_blank';
+                if (button.external) { a.target = '_blank'; a.rel = 'noopener'; }
+                if (button.download) a.setAttribute('download', '');
                 a.innerHTML = button.icon ? `<i class="${button.icon}"></i> ${button.text}` : button.text;
                 ctaContainer.appendChild(a);
             });
@@ -149,8 +157,12 @@ async function loadAbout() {
             about.statistics.forEach(stat => {
                 const div = document.createElement('div');
                 div.className = 'stat-item';
+                const suffix = stat.suffix || '';
+                const isNumeric = typeof stat.value === 'number';
+                const numAttrs = isNumeric ? ` data-target="${stat.value}" data-suffix="${suffix}"` : '';
+                const numText = isNumeric ? '0' + suffix : stat.value;
                 div.innerHTML = `
-                    <h3>${stat.value}</h3>
+                    <h3 class="stat-number"${numAttrs}>${numText}</h3>
                     <p>${stat.label}</p>
                 `;
                 statsContainer.appendChild(div);
@@ -172,6 +184,10 @@ async function loadContact() {
         // Update section title
         const sectionTitle = document.querySelector('#contact .section-title');
         if (sectionTitle) sectionTitle.textContent = contact.sectionTitle;
+
+        // Intro line
+        const contactIntro = document.getElementById('contactIntro');
+        if (contactIntro) contactIntro.textContent = contact.intro || '';
 
         // Build contact info
         const contactInfoContainer = document.getElementById('contactInfo');
@@ -211,18 +227,67 @@ async function loadContact() {
                 formHTML += '</div>';
             });
 
+            // Honeypot (bots fill hidden fields; humans never see it)
+            formHTML += '<input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">';
             formHTML += `<button type="submit" class="btn btn-${contact.form.submitButton.type}">${contact.form.submitButton.text}</button>`;
+            formHTML += '<p class="form-status" role="status" aria-live="polite"></p>';
             formHTML += '</form>';
 
             formContainer.innerHTML = formHTML;
 
-            // Re-attach form submit handler
+            // Attach submit handler — POST to the configured endpoint (FormSubmit)
             const contactForm = document.getElementById('contactForm');
             if (contactForm) {
-                contactForm.addEventListener('submit', (e) => {
+                const statusEl = contactForm.querySelector('.form-status');
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+                contactForm.addEventListener('submit', async (e) => {
                     e.preventDefault();
-                    alert(contact.form.successMessage);
-                    contactForm.reset();
+
+                    // Spam trap: if the honeypot is filled, silently drop.
+                    if (contactForm.querySelector('[name="_honey"]').value) return;
+
+                    const endpoint = contact.form.endpoint;
+                    const setStatus = (msg, type) => {
+                        statusEl.textContent = msg;
+                        statusEl.className = 'form-status' + (type ? ' ' + type : '');
+                    };
+
+                    // No endpoint configured → keep the old friendly acknowledgement.
+                    if (!endpoint) {
+                        setStatus(contact.form.successMessage, 'success');
+                        contactForm.reset();
+                        return;
+                    }
+
+                    const payload = {};
+                    new FormData(contactForm).forEach((v, k) => { payload[k] = v; });
+                    delete payload._honey;
+                    if (contact.form.subject) payload._subject = contact.form.subject;
+                    payload._captcha = 'false';
+                    payload._template = 'table';
+
+                    const originalLabel = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = 'Sending…';
+                    setStatus('', '');
+
+                    try {
+                        const res = await fetch(endpoint, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                        if (!res.ok) throw new Error('HTTP ' + res.status);
+                        setStatus(contact.form.successMessage, 'success');
+                        contactForm.reset();
+                    } catch (err) {
+                        console.error('Contact form error:', err);
+                        setStatus(contact.form.errorMessage || 'Something went wrong. Please try again.', 'error');
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalLabel;
+                    }
                 });
             }
         }
@@ -286,18 +351,13 @@ navLinks.forEach(link => {
 // Navbar Scroll Effect
 // ==========================================================================
 const navbar = document.getElementById('navbar');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+    if (window.pageYOffset > 40) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
+        navbar.classList.remove('scrolled');
     }
-
-    lastScroll = currentScroll;
 });
 
 // ==========================================================================
@@ -347,9 +407,12 @@ async function loadExperience() {
             timelineItem.innerHTML = `
                 <div class="timeline-content">
                     <div class="timeline-header">
-                        <div>
-                            <h3 class="timeline-title">${exp.title}</h3>
-                            <p class="timeline-company">${exp.company}</p>
+                        <div class="timeline-heading">
+                            ${exp.logo ? `<img class="org-logo" src="${exp.logo}" alt="${exp.company} logo" loading="lazy">` : ''}
+                            <div>
+                                <h3 class="timeline-title">${exp.title}</h3>
+                                <p class="timeline-company">${exp.company}</p>
+                            </div>
                         </div>
                         <span class="timeline-period">${exp.period}</span>
                     </div>
@@ -388,15 +451,38 @@ async function loadSkills() {
             const skillCategory = document.createElement('div');
             skillCategory.className = 'skill-category';
 
-            const skillTags = category.skills
-                .map(skill => `<span class="skill-tag">${skill}</span>`)
-                .join('');
+            const hasBars = category.skills.some(
+                s => typeof s === 'object' && s !== null && 'level' in s
+            );
+
+            let body;
+            if (hasBars) {
+                skillCategory.classList.add('has-bars');
+                body = `<div class="skill-bars">${category.skills
+                    .map(skill => {
+                        const name = typeof skill === 'object' ? skill.name : skill;
+                        const level = typeof skill === 'object' ? (skill.level || 0) : 0;
+                        return `
+                        <div class="skill-bar">
+                            <div class="skill-bar-head">
+                                <span class="skill-bar-name">${name}</span>
+                                <span class="skill-bar-pct">${level}%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <span class="skill-bar-fill" data-level="${level}"></span>
+                            </div>
+                        </div>`;
+                    })
+                    .join('')}</div>`;
+            } else {
+                body = `<div class="skill-list">${category.skills
+                    .map(skill => `<span class="skill-tag">${typeof skill === 'object' ? skill.name : skill}</span>`)
+                    .join('')}</div>`;
+            }
 
             skillCategory.innerHTML = `
                 <h3><i class="${category.icon}"></i> ${category.category}</h3>
-                <div class="skill-list">
-                    ${skillTags}
-                </div>
+                ${body}
             `;
             skillsGrid.appendChild(skillCategory);
         });
@@ -445,7 +531,11 @@ async function loadProjects() {
 
             projectCard.innerHTML = `
                 <div class="project-image">
-                    <i class="${project.icon || 'fas fa-code'}"></i>
+                    ${project.image ? `<img class="project-thumb" src="${project.image}" alt="${project.title}" loading="lazy">` : ''}
+                    <div class="project-image-overlay">
+                        <i class="${project.icon || 'fas fa-code'}"></i>
+                        ${project.category ? `<span class="project-category">${project.category}</span>` : ''}
+                    </div>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">${project.title}</h3>
@@ -477,7 +567,11 @@ async function loadEducation() {
         const sectionTitle = document.querySelector('#education .section-title');
         if (sectionTitle) sectionTitle.textContent = data.sectionTitle;
 
-        // Update certifications title
+        // Certifications — hide the whole block when there are none
+        const certBlock = document.querySelector('#education .certifications');
+        const hasCerts = Array.isArray(data.certifications) && data.certifications.length > 0;
+        if (certBlock) certBlock.style.display = hasCerts ? '' : 'none';
+
         const certTitle = document.querySelector('#education .certifications h3');
         if (certTitle) certTitle.textContent = data.certificationsTitle || 'Certifications';
 
@@ -494,9 +588,12 @@ async function loadEducation() {
 
             eduItem.innerHTML = `
                 <div class="education-header">
-                    <div>
-                        <h3 class="education-degree">${edu.degree}</h3>
-                        <p class="education-school">${edu.school}</p>
+                    <div class="education-heading">
+                        ${edu.logo ? `<img class="org-logo" src="${edu.logo}" alt="${edu.school} logo" loading="lazy">` : ''}
+                        <div>
+                            <h3 class="education-degree">${edu.degree}</h3>
+                            <p class="education-school">${edu.school}</p>
+                        </div>
                     </div>
                     <span class="education-period">${edu.period}</span>
                 </div>
@@ -555,6 +652,61 @@ function initScrollAnimation() {
 window.addEventListener('scroll', revealOnScroll);
 
 // ==========================================================================
+// Animated Stat Counters (count up when scrolled into view)
+// ==========================================================================
+function animateCounters() {
+    const nums = document.querySelectorAll('.stat-number[data-target]');
+    if (!nums.length || !('IntersectionObserver' in window)) {
+        nums.forEach(el => {
+            el.textContent = el.getAttribute('data-target') + (el.getAttribute('data-suffix') || '');
+        });
+        return;
+    }
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const target = parseFloat(el.getAttribute('data-target')) || 0;
+            const suffix = el.getAttribute('data-suffix') || '';
+            const duration = 1400;
+            const start = performance.now();
+            function tick(now) {
+                const p = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.round(target * eased) + suffix;
+                if (p < 1) requestAnimationFrame(tick);
+                else el.textContent = target + suffix;
+            }
+            requestAnimationFrame(tick);
+            obs.unobserve(el);
+        });
+    }, { threshold: 0.4 });
+    nums.forEach(n => observer.observe(n));
+}
+
+// ==========================================================================
+// Animated Skill Proficiency Bars (fill when scrolled into view)
+// ==========================================================================
+function animateSkillBars() {
+    const fills = document.querySelectorAll('.skill-bar-fill[data-level]');
+    if (!fills.length) return;
+    if (!('IntersectionObserver' in window)) {
+        fills.forEach(el => { el.style.width = (parseFloat(el.getAttribute('data-level')) || 0) + '%'; });
+        return;
+    }
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const level = parseFloat(el.getAttribute('data-level')) || 0;
+            requestAnimationFrame(() => { el.style.width = level + '%'; });
+            obs.unobserve(el);
+        });
+    }, { threshold: 0.3 });
+    fills.forEach(f => observer.observe(f));
+}
+
+// ==========================================================================
 // Initialize Everything When DOM is Ready
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', async () => {
@@ -574,6 +726,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     setTimeout(() => {
         initScrollAnimation();
         revealOnScroll();
+        animateCounters();
+        animateSkillBars();
     }, 100);
 });
 
@@ -592,9 +746,9 @@ window.addEventListener('scroll', () => {
 
         if (navLink) {
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLink.style.color = 'var(--primary-color)';
+                navLink.classList.add('active');
             } else {
-                navLink.style.color = '';
+                navLink.classList.remove('active');
             }
         }
     });

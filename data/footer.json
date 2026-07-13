@@ -2,8 +2,21 @@
   "_instructions": "Footer content.",
   "copyright": {
     "text": "All rights reserved.",
-    "name": "HAMSIKA CHINTAKUNTLA",
+    "name": "Hamsika Chintakuntla",
     "year": 2026
   },
-  "links": []
+  "links": [
+    {
+      "text": "LinkedIn",
+      "url": "https://www.linkedin.com/in/hamsika-chintakuntla-441456259"
+    },
+    {
+      "text": "GitHub",
+      "url": "https://github.com/hamsikavarma"
+    },
+    {
+      "text": "Email",
+      "url": "mailto:chintakuntlahamsika@gmail.com"
+    }
+  ]
 }

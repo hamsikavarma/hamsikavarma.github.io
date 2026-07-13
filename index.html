@@ -7,6 +7,20 @@
     <meta name="author" content="" />
     <meta name="keywords" content="" />
     <title>Portfolio</title>
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2312463F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23F7F4EF' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E"
+    />
+
+    <!-- Fonts: Fraunces (display serif), Inter (sans), JetBrains Mono (labels) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link
       rel="stylesheet"
@@ -20,23 +34,35 @@
         <div class="nav-brand">
           <a href="#home"></a>
         </div>
-        <button class="nav-toggle" id="navToggle">
+        <ul class="nav-menu" id="navMenu">
+          <!-- Navigation items will be loaded dynamically -->
+        </ul>
+        <div class="nav-actions">
+          <a
+            class="nav-resume"
+            href="assets/Hamsika_Chintakuntla_Resume.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fas fa-file-arrow-down"></i> Résumé
+          </a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <ul class="nav-menu" id="navMenu">
-          <!-- Navigation items will be loaded dynamically -->
-        </ul>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <div class="container">
-        <div class="hero-content">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="hero-kicker" id="heroKicker"></span>
           <h1 class="hero-title">
-            <span id="heroGreeting"></span> <span class="highlight" id="heroName"></span>
+            <span class="hero-greeting" id="heroGreeting"></span>
+            <span class="highlight" id="heroName"></span>
           </h1>
           <h2 class="hero-subtitle" id="heroTitle"></h2>
           <p class="hero-description" id="heroSummary"></p>
@@ -50,13 +76,24 @@
             <!-- Social links will be loaded dynamically -->
           </div>
         </div>
+        <div class="hero-photo">
+          <div class="hero-photo-frame">
+            <img id="heroPhoto" alt="Hamsika Chintakuntla" />
+          </div>
+        </div>
       </div>
+      <a href="#about" class="hero-scroll" aria-label="Scroll to About">
+        <span>Scroll</span><i class="fas fa-arrow-down"></i>
+      </a>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
       <div class="container">
-        <h2 class="section-title"></h2>
+        <div class="section-head">
+          <span class="section-kicker">01 — About</span>
+          <h2 class="section-title"></h2>
+        </div>
         <div class="about-content">
           <div class="about-text" id="aboutText">
             <!-- Paragraphs will be loaded dynamically -->
@@ -71,7 +108,10 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
       <div class="container">
-        <h2 class="section-title"></h2>
+        <div class="section-head">
+          <span class="section-kicker">02 — Experience</span>
+          <h2 class="section-title"></h2>
+        </div>
         <div class="timeline" id="experienceTimeline">
           <!-- Experience items will be loaded dynamically -->
         </div>
@@ -81,7 +121,10 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
       <div class="container">
-        <h2 class="section-title"></h2>
+        <div class="section-head">
+          <span class="section-kicker">03 — Capabilities</span>
+          <h2 class="section-title"></h2>
+        </div>
         <div class="skills-grid" id="skillsGrid">
           <!-- Skills will be loaded dynamically -->
         </div>
@@ -91,7 +134,10 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
       <div class="container">
-        <h2 class="section-title"></h2>
+        <div class="section-head">
+          <span class="section-kicker">04 — Selected Work</span>
+          <h2 class="section-title"></h2>
+        </div>
         <div class="projects-grid" id="projectsGrid">
           <!-- Projects will be loaded dynamically -->
         </div>
@@ -101,7 +147,10 @@
     <!-- Education Section -->
     <section id="education" class="education">
       <div class="container">
-        <h2 class="section-title"></h2>
+        <div class="section-head">
+          <span class="section-kicker">05 — Education</span>
+          <h2 class="section-title"></h2>
+        </div>
         <div class="education-content">
           <div class="education-grid" id="educationGrid">
             <!-- Education items will be loaded dynamically -->
@@ -119,7 +168,11 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2 class="section-title"></h2>
+        <div class="section-head">
+          <span class="section-kicker">06 — Contact</span>
+          <h2 class="section-title"></h2>
+        </div>
+        <p class="contact-intro" id="contactIntro"></p>
         <div class="contact-content">
           <div class="contact-info" id="contactInfo">
             <!-- Contact info will be loaded dynamically -->

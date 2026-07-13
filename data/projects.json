@@ -1,192 +1,61 @@
 {
-  "_instructions": "Add your projects here. Each project should showcase your work.",
+  "_instructions": "Six curated projects. Each needs a technologies[] array (loader maps over it).",
   "sectionTitle": "Featured Projects",
+  "kicker": "04 — Selected Work",
   "projects": [
     {
-      "title": "fraud-detection-in-python",
-      "description": "Full-featured application built as a learning exercise",
-      "technologies": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/fraud-detection-in-python",
-      "demo": "https://github.com/hamsikavarma/fraud-detection-in-python"
+      "title": "Credit-Card Fraud Detection",
+      "category": "Machine Learning · MLOps",
+      "image": "assets/images/projects/fraud-detection.jpg",
+      "description": "An end-to-end MLOps pipeline that trains, tracks, and serves a credit-card fraud classifier — from imbalanced-data handling and model evaluation to a containerized, reproducible deployment.",
+      "technologies": ["Python", "Scikit-learn", "MLflow", "Docker", "FastAPI"],
+      "icon": "fas fa-shield-halved",
+      "github": "https://github.com/hamsikavarma/creditcardfrauddetection-mlops"
     },
     {
-      "title": "time-series-forecasting-python",
-      "description": "Modern web application demonstrating clean code principles",
-      "technologies": [
-        "Jupyter Notebook",
-        "Python",
-        "HTML"
-      ],
-      "icon": "fas fa-brain",
-      "github": "https://github.com/hamsikavarma/time-series-forecasting-python",
-      "demo": "https://github.com/hamsikavarma/time-series-forecasting-python"
+      "title": "Time-Series Forecasting",
+      "category": "Predictive Analytics",
+      "image": "assets/images/projects/time-series.jpg",
+      "description": "Demand and financial time-series forecasting in Python — exploratory analysis, feature engineering, and backtested models comparing classical statistics against machine-learning approaches.",
+      "technologies": ["Python", "Pandas", "Statsmodels", "Scikit-learn", "Jupyter"],
+      "icon": "fas fa-chart-line",
+      "github": "https://github.com/hamsikavarma/time-series-forecasting-python"
     },
     {
-      "title": "creditcardfrauddetection-mlops",
-      "description": "Modern web application demonstrating clean code principles",
-      "technologies": [
-        "Jupyter Notebook",
-        "Python",
-        "HTML",
-        "CSS",
-        "Dockerfile"
-      ],
-      "icon": "fas fa-brain",
-      "github": "https://github.com/hamsikavarma/creditcardfrauddetection-mlops",
-      "demo": "https://github.com/hamsikavarma/creditcardfrauddetection-mlops"
+      "title": "Mutual-Fund Analysis Dashboard",
+      "category": "Business Intelligence",
+      "image": "assets/images/projects/mutual-fund.jpg",
+      "description": "An interactive Power BI dashboard analyzing mutual-fund performance, risk, and returns — backed by a Python data-prep layer that cleans and aggregates fund data into decision-ready visuals.",
+      "technologies": ["Power BI", "Python", "Pandas", "DAX"],
+      "icon": "fas fa-coins",
+      "github": "https://github.com/hamsikavarma/mutual-fund-analysis-dashboard-python-powerbi"
     },
     {
-      "title": "mutual-fund-analysis-dashboard-python-powerbi",
-      "description": "Educational project for mastering software architecture",
-      "technologies": [
-        "HTML"
-      ],
-      "icon": "fas fa-brain",
-      "github": "https://github.com/hamsikavarma/mutual-fund-analysis-dashboard-python-powerbi",
-      "demo": "https://github.com/hamsikavarma/mutual-fund-analysis-dashboard-python-powerbi"
+      "title": "Supply-Chain Dashboard",
+      "category": "Business Intelligence",
+      "image": "assets/images/projects/supply-chain.jpg",
+      "description": "A supply-chain analytics dashboard surfacing inventory, fulfillment, and cost KPIs — turning raw operational data into clear signals for planning and bottleneck detection.",
+      "technologies": ["Python", "Power BI", "SQL"],
+      "icon": "fas fa-truck-fast",
+      "github": "https://github.com/hamsikavarma/supply-chain-dashboard"
     },
     {
-      "title": "supply-chain-dashboard",
-      "description": "Learning project built with modern web technologies",
-      "technologies": [
-        "Python"
-      ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/supply-chain-dashboard",
-      "demo": "https://github.com/hamsikavarma/supply-chain-dashboard"
+      "title": "HR Analytics KPI Dashboard",
+      "category": "Business Intelligence",
+      "image": "assets/images/projects/hr-analytics.jpg",
+      "description": "A Power BI KPI dashboard for HR analytics — tracking headcount, attrition, and workforce trends with custom DAX measures and drill-through for stakeholder self-service.",
+      "technologies": ["Power BI", "DAX", "Excel"],
+      "icon": "fas fa-users",
+      "github": "https://github.com/hamsikavarma/hr-analytics-kpi-dashboard-using-power-bi"
     },
     {
-      "title": "NNDL_ICP_5",
-      "description": "Assignment",
-      "technologies": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/NNDL_ICP_5",
-      "demo": "https://github.com/hamsikavarma/NNDL_ICP_5"
-    },
-    {
-      "title": "NNDL",
-      "description": "ICP-1",
-      "technologies": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/NNDL",
-      "demo": "https://github.com/hamsikavarma/NNDL"
-    },
-    {
-      "title": "call-center-performance-analytics-dashboard",
-      "description": "Educational project for mastering software architecture",
-      "technologies": [],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/call-center-performance-analytics-dashboard",
-      "demo": "https://github.com/hamsikavarma/call-center-performance-analytics-dashboard"
-    },
-    {
-      "title": "power-bi-mastery-dynamic-dashboards-advanced-dax",
-      "description": "Learning project built with modern web technologies",
-      "technologies": [],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/power-bi-mastery-dynamic-dashboards-advanced-dax",
-      "demo": "https://github.com/hamsikavarma/power-bi-mastery-dynamic-dashboards-advanced-dax"
-    },
-    {
-      "title": "hr-analytics-kpi-dashboard-using-power-bi",
-      "description": "Full-featured application built as a learning exercise",
-      "technologies": [],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/hr-analytics-kpi-dashboard-using-power-bi",
-      "demo": "https://github.com/hamsikavarma/hr-analytics-kpi-dashboard-using-power-bi"
-    },
-    {
-      "title": "dashboards-development-using-tableau-and-powerbi",
-      "description": "Practice application demonstrating full-stack development skills",
-      "technologies": [],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/dashboards-development-using-tableau-and-powerbi",
-      "demo": "https://github.com/hamsikavarma/dashboards-development-using-tableau-and-powerbi"
-    },
-    {
-      "title": "Neuralnetwork1",
-      "description": "700771943",
-      "technologies": [],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/Neuralnetwork1",
-      "demo": "https://github.com/hamsikavarma/Neuralnetwork1"
-    },
-    {
-      "title": "FINAL-",
-      "description": "GitHub repository: FINAL-",
-      "technologies": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/FINAL-",
-      "demo": "https://github.com/hamsikavarma/FINAL-"
-    },
-    {
-      "title": "Mini_NNDL",
-      "description": "GitHub repository: Mini_NNDL",
-      "technologies": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/Mini_NNDL",
-      "demo": "https://github.com/hamsikavarma/Mini_NNDL"
-    },
-    {
-      "title": "NNDL-ICP6",
-      "description": "GitHub repository: NNDL-ICP6",
-      "technologies": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/NNDL-ICP6",
-      "demo": "https://github.com/hamsikavarma/NNDL-ICP6"
-    },
-    {
-      "title": "NNDL_ICP_4",
-      "description": "GitHub repository: NNDL_ICP_4",
-      "technologies": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/NNDL_ICP_4",
-      "demo": "https://github.com/hamsikavarma/NNDL_ICP_4"
-    },
-    {
-      "title": "NNDL_ICP_3",
-      "description": "GitHub repository: NNDL_ICP_3",
-      "technologies": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/NNDL_ICP_3",
-      "demo": "https://github.com/hamsikavarma/NNDL_ICP_3"
-    },
-    {
-      "title": "Assignment_2",
-      "description": "GitHub repository: Assignment_2",
-      "technologies": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/Assignment_2",
-      "demo": "https://github.com/hamsikavarma/Assignment_2"
-    },
-    {
-      "title": "NNDL1_ICP_1",
-      "description": "GitHub repository: NNDL1_ICP_1",
-      "technologies": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/hamsikavarma/NNDL1_ICP_1",
-      "demo": "https://github.com/hamsikavarma/NNDL1_ICP_1"
+      "title": "Call-Center Performance Analytics",
+      "category": "Business Intelligence",
+      "image": "assets/images/projects/call-center.jpg",
+      "description": "A performance-analytics dashboard for call-center operations — visualizing call volume, handle time, and CSAT so managers can monitor service levels and staffing at a glance.",
+      "technologies": ["Power BI", "SQL", "Excel"],
+      "icon": "fas fa-headset",
+      "github": "https://github.com/hamsikavarma/call-center-performance-analytics-dashboard"
     }
   ]
 }

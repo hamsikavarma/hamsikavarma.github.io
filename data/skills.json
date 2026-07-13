@@ -1,94 +1,74 @@
 {
-  "_instructions": "Organize your skills into categories. Each category has a name, icon, and list of skills.",
+  "_instructions": "Categories with object skills ({name, level}) render as animated proficiency bars; categories with string skills render as chips.",
   "_iconHelp": "Use Font Awesome icons (https://fontawesome.com/icons).",
   "sectionTitle": "Skills & Technologies",
+  "kicker": "03 — Capabilities",
   "categories": [
     {
-      "category": "Programming Languages",
+      "category": "Analytics & BI",
+      "icon": "fas fa-chart-column",
+      "skills": [
+        { "name": "SQL", "level": 95 },
+        { "name": "Power BI (DAX, Power Query)", "level": 92 },
+        { "name": "Tableau", "level": 88 },
+        { "name": "Advanced Excel", "level": 92 }
+      ]
+    },
+    {
+      "category": "Programming & Data Engineering",
       "icon": "fas fa-code",
       "skills": [
-        "Python",
-        "SQL"
+        { "name": "Python (Pandas, NumPy)", "level": 90 },
+        { "name": "ETL / ELT Pipelines (SSIS)", "level": 87 },
+        { "name": "Data Warehousing & Modeling", "level": 83 },
+        { "name": "Machine Learning & AI", "level": 74 }
       ]
     },
     {
-      "category": "Frameworks & Libraries",
-      "icon": "fas fa-toolbox",
+      "category": "Platforms & Tools",
+      "icon": "fas fa-layer-group",
       "skills": [
-        "Pandas",
-        "NumPy",
-        "Scikit-learn",
-        "TensorFlow",
-        "LangChain",
-        "FastAPI"
-      ]
-    },
-    {
-      "category": "Tools & Platforms",
-      "icon": "fas fa-wrench",
-      "skills": [
-        "Power BI",
-        "Tableau",
-        "Excel",
-        "SSIS",
-        "SSRS",
         "Microsoft SQL Server",
         "PostgreSQL",
         "MySQL",
         "Oracle DB",
         "Azure Synapse Analytics",
-        "Microsoft Azure",
-        "AWS",
+        "Azure Data Factory",
+        "AWS S3",
         "OpenAI API",
+        "LangChain",
+        "FastAPI",
         "MLflow",
         "Great Expectations",
-        "Git",
-        "GitHub",
+        "Git & GitHub",
         "Jira",
         "Confluence"
       ]
     },
     {
-      "category": "Technical Skills",
-      "icon": "fas fa-laptop-code",
+      "category": "Specialties",
+      "icon": "fas fa-brain",
       "skills": [
-        "Data Analytics",
         "Business Intelligence",
-        "ETL/ELT Pipelines",
-        "Data Integration",
-        "Data Transformation",
-        "Workflow Automation",
-        "Data Cleaning",
-        "Data Validation",
-        "Data Reconciliation",
-        "Data Modeling",
+        "KPI Reporting",
+        "Data Validation & Reconciliation",
+        "Statistical & Trend Analysis",
+        "Root Cause Analysis",
         "Reporting Automation",
-        "Data Warehousing",
-        "Star Schema",
-        "Dimensional Modeling",
+        "Star Schema & Dimensional Modeling",
         "Predictive Analytics",
-        "Machine Learning",
         "Feature Engineering",
-        "Model Evaluation",
-        "Natural Language Processing (NLP)",
+        "NLP",
         "LLM Integration",
         "Prompt Engineering",
         "Retrieval-Augmented Generation (RAG)",
-        "Embeddings",
-        "Vector Databases (Pinecone)",
+        "Embeddings & Vector DBs",
         "AI-Powered Analytics",
-        "Model Serving",
-        "Data Quality Frameworks",
         "Data Governance",
-        "Data Integrity",
         "Data Lineage",
         "PII Masking",
-        "Agile/Scrum Methodology",
-        "Stakeholder Management",
-        "Cross-Functional Collaboration",
-        "Analytical Thinking",
-        "Problem Solving",
-        "Attention to Detail"
+        "Agile / Scrum",
+        "Stakeholder Management"
       ]
     }
   ]

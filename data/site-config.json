@@ -1,13 +1,13 @@
 {
   "_instructions": "Site-wide configuration and meta tags. Update these values for SEO and branding.",
   "meta": {
-    "title": "HAMSIKA CHINTAKUNTLA | Data Analyst",
-    "description": "HAMSIKA CHINTAKUNTLA - Data Analyst | Portfolio",
-    "author": "HAMSIKA CHINTAKUNTLA",
-    "keywords": "Data Analyst, Portfolio, HAMSIKA CHINTAKUNTLA"
+    "title": "Hamsika Chintakuntla — Data Analyst",
+    "description": "Hamsika Chintakuntla — Data Analyst specializing in SQL, Python, Power BI, Tableau, ETL/ELT pipelines, BI dashboards, and AI-powered analytics across financial services and healthcare.",
+    "author": "Hamsika Chintakuntla",
+    "keywords": "Data Analyst, Business Intelligence, Power BI, Tableau, SQL, Python, ETL, Machine Learning, Portfolio, Hamsika Chintakuntla"
   },
   "branding": {
-    "name": "HAMSIKA CHINTAKUNTLA",
+    "name": "Hamsika Chintakuntla",
     "tagline": "Data Analyst"
   },
   "settings": {

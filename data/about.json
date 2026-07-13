@@ -1,22 +1,31 @@
 {
   "_instructions": "About section content.",
   "sectionTitle": "About Me",
+  "kicker": "01 — About",
   "paragraphs": [
-    "Data Analyst with 4+ years of experience delivering data-driven solutions across financial services and healthcare technology. Experienced in SQL, Python, Power BI, Tableau, and Advanced Excel for data analysis, ETL/ELT pipelines, dashboard development, KPI reporting, and business intelligence. Skilled in transforming complex datasets into actionable business insights through data validation, statistical analysis, trend analysis, and reporting automation.",
-    "Familiar with Machine Learning, NLP, OpenAI API, LLM Integration, Prompt Engineering, Retrieval-Augmented Generation (RAG), and AI powered analytics to support predictive decision-making and process improvement. Strong collaborator with experience partnering with cross functional stakeholders to improve data quality, reporting accuracy, and operational efficiency."
+    "Data Analyst with 4+ years of experience delivering data-driven solutions across financial services and healthcare technology. I work fluently in SQL, Python, Power BI, Tableau, and Advanced Excel to build ETL/ELT pipelines, dashboards, KPI reporting, and business intelligence — transforming complex datasets into actionable insight through data validation, statistical analysis, and reporting automation.",
+    "I'm equally at home with Machine Learning, NLP, the OpenAI API, LLM integration, prompt engineering, and Retrieval-Augmented Generation (RAG) to support predictive decision-making and process improvement. A strong collaborator, I partner closely with cross-functional stakeholders to raise data quality, reporting accuracy, and operational efficiency."
   ],
   "statistics": [
     {
-      "value": "1+",
+      "value": 4,
+      "suffix": "+",
       "label": "Years Experience"
     },
     {
-      "value": "2+",
-      "label": "Projects Completed"
+      "value": 40,
+      "suffix": "%",
+      "label": "Less Manual Reporting"
     },
     {
-      "value": "27+",
-      "label": "Technologies"
+      "value": 30,
+      "suffix": "%",
+      "label": "Higher Report Reliability"
+    },
+    {
+      "value": 6,
+      "suffix": "",
+      "label": "Featured Projects"
     }
   ]
 }
